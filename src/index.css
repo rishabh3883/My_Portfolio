@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textMain antialiased overflow-hidden;
+    /* overflow-hidden to prevent scrolling, as the whole experience is inside the book */
+  }
+}
+
+@layer utilities {
+  .page-container {
+    @apply w-full h-full bg-surface shadow-page border border-white/5 relative flex flex-col items-center justify-center p-8 lg:p-12;
+  }
+  
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+}
+
+/* Custom react-pageflip styles to override default behavior if needed */
+.stPageFlip {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+}
