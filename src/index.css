@@ -6,8 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-background text-textMain antialiased overflow-hidden;
-    /* overflow-hidden to prevent scrolling, as the whole experience is inside the book */
+    @apply bg-background text-textMain antialiased overflow-x-hidden;
   }
 }
 
