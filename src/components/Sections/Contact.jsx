@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
                 <span className="text-sm font-medium text-white">GitHub</span>
               </a>
-              <a href="https://linkedin.com/in/rishabh-gupta" target="_blank" rel="noreferrer" className="flex-1 glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 group hover:bg-white/10 transition-colors">
+              <a href="https://linkedin.com/in/rishabh-gupta-5280832b7" target="_blank" rel="noreferrer" className="flex-1 glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 group hover:bg-white/10 transition-colors">
                 <div className="text-textMuted group-hover:text-[#0077b5] transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 </div>
