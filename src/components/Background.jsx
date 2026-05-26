@@ -19,7 +19,7 @@ const Background = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden bg-[#050505]">
+    <div className="fixed inset-0 z-[-1] overflow-hidden bg-[#020617]">
       {/* 1. Subtle Tech Grid */}
       <div 
         className="absolute inset-0 opacity-[0.15]"

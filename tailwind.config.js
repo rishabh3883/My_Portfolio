@@ -10,10 +10,10 @@ export default {
         sans: ['Outfit', 'Inter', 'sans-serif'],
       },
       colors: {
-        background: '#0a0a0a',
-        surface: '#171717',
-        primary: '#3b82f6',
-        textMain: '#f3f4f6',
+        background: '#020617', // slate-950
+        surface: '#0f172a',    // slate-900
+        primary: '#38bdf8',    // sky-400
+        textMain: '#ffffff',
         textMuted: '#9ca3af',
       },
       boxShadow: {

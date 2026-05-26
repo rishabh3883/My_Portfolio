@@ -1,26 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaJava, FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaGithub, FaGitAlt, FaCogs } from 'react-icons/fa';
+import { SiJavascript, SiExpress, SiMongodb, SiPostman, SiGithubactions } from 'react-icons/si';
+import { TbApi } from 'react-icons/tb';
+import { MdSecurity } from 'react-icons/md';
+import { FiDatabase } from 'react-icons/fi';
+import { BsDatabase } from 'react-icons/bs';
 
 const skillsData = [
   {
     title: 'Languages',
-    skills: ['Java', 'Python', 'JavaScript']
+    skills: [
+      { name: 'Java', icon: FaJava },
+      { name: 'Python', icon: FaPython },
+      { name: 'JavaScript', icon: SiJavascript }
+    ]
   },
   {
     title: 'Web Development',
-    skills: ['HTML', 'CSS', 'React.js', 'Node.js', 'Express.js']
+    skills: [
+      { name: 'HTML', icon: FaHtml5 },
+      { name: 'CSS', icon: FaCss3Alt },
+      { name: 'React.js', icon: FaReact },
+      { name: 'Node.js', icon: FaNodeJs },
+      { name: 'Express.js', icon: SiExpress }
+    ]
   },
   {
     title: 'Backend',
-    skills: ['REST API Development', 'JWT Authentication', 'CRUD Operations']
+    skills: [
+      { name: 'REST APIs', icon: TbApi },
+      { name: 'JWT Auth', icon: MdSecurity },
+      { name: 'CRUD Ops', icon: FiDatabase }
+    ]
   },
   {
     title: 'Databases',
-    skills: ['MongoDB', 'SQL']
+    skills: [
+      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'SQL', icon: BsDatabase }
+    ]
   },
   {
     title: 'Tools',
-    skills: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Postman', 'CI/CD']
+    skills: [
+      { name: 'Git', icon: FaGitAlt },
+      { name: 'GitHub', icon: FaGithub },
+      { name: 'GitHub Actions', icon: SiGithubactions },
+      { name: 'Docker', icon: FaDocker },
+      { name: 'Postman', icon: SiPostman },
+      { name: 'CI/CD', icon: FaCogs }
+    ]
   }
 ];
 
@@ -35,7 +65,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: -40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 };
 
@@ -44,7 +74,7 @@ const Skills = () => {
     <section id="skills" className="py-24 bg-white/5 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
@@ -71,15 +101,19 @@ const Skills = () => {
                 <span className="w-2 h-2 rounded-full bg-primary" />
                 {category.title}
               </h4>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, sIdx) => (
-                  <span 
-                    key={sIdx}
-                    className="px-4 py-2 bg-black/40 border border-white/5 text-textMuted rounded-lg text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {category.skills.map((skill, sIdx) => {
+                  const Icon = skill.icon;
+                  return (
+                    <div 
+                      key={sIdx}
+                      className="flex flex-col items-center justify-center p-5 bg-black/40 border border-white/5 rounded-xl hover:bg-white/10 hover:border-primary/40 transition-all duration-300 group shadow-lg"
+                    >
+                      <Icon className="text-4xl text-primary mb-3 group-hover:scale-110 group-hover:text-white transition-all duration-300" />
+                      <span className="text-xs font-semibold text-gray-300 text-center tracking-wide">{skill.name}</span>
+                    </div>
+                  );
+                })}
               </div>
             </motion.div>
           ))}
