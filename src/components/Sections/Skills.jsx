@@ -1,58 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaJava, FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaGithub, FaGitAlt, FaCogs } from 'react-icons/fa';
+import { FaJava, FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaGithub, FaGitAlt, FaCogs, FaCode, FaServer, FaTerminal, FaLaptopCode } from 'react-icons/fa';
 import { SiJavascript, SiExpress, SiMongodb, SiPostman, SiGithubactions } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import { MdSecurity } from 'react-icons/md';
 import { FiDatabase } from 'react-icons/fi';
 import { BsDatabase } from 'react-icons/bs';
+import portfolioData from '../../data/portfolioData.json';
 
-const skillsData = [
-  {
-    title: 'Languages',
-    skills: [
-      { name: 'Java', icon: FaJava },
-      { name: 'Python', icon: FaPython },
-      { name: 'JavaScript', icon: SiJavascript }
-    ]
-  },
-  {
-    title: 'Web Development',
-    skills: [
-      { name: 'HTML', icon: FaHtml5 },
-      { name: 'CSS', icon: FaCss3Alt },
-      { name: 'React.js', icon: FaReact },
-      { name: 'Node.js', icon: FaNodeJs },
-      { name: 'Express.js', icon: SiExpress }
-    ]
-  },
-  {
-    title: 'Backend',
-    skills: [
-      { name: 'REST APIs', icon: TbApi },
-      { name: 'JWT Auth', icon: MdSecurity },
-      { name: 'CRUD Ops', icon: FiDatabase }
-    ]
-  },
-  {
-    title: 'Databases',
-    skills: [
-      { name: 'MongoDB', icon: SiMongodb },
-      { name: 'SQL', icon: BsDatabase }
-    ]
-  },
-  {
-    title: 'Tools',
-    skills: [
-      { name: 'Git', icon: FaGitAlt },
-      { name: 'GitHub', icon: FaGithub },
-      { name: 'GitHub Actions', icon: SiGithubactions },
-      { name: 'Docker', icon: FaDocker },
-      { name: 'Postman', icon: SiPostman },
-      { name: 'CI/CD', icon: FaCogs }
-    ]
-  }
-];
+const iconMap = {
+  FaJava, FaPython, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker, FaGithub, FaGitAlt, FaCogs, FaCode, FaServer, FaTerminal, FaLaptopCode,
+  SiJavascript, SiExpress, SiMongodb, SiPostman, SiGithubactions,
+  TbApi, MdSecurity, FiDatabase, BsDatabase
+};
+
+const getIcon = (iconName) => {
+  return iconMap[iconName] || FaCode;
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -70,6 +34,8 @@ const itemVariants = {
 };
 
 const Skills = () => {
+  const { skills: skillsData } = portfolioData;
+
   return (
     <section id="skills" className="py-24 bg-white/5 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6">
@@ -91,7 +57,7 @@ const Skills = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {skillsData.map((category, idx) => (
+          {skillsData && skillsData.map((category, idx) => (
             <motion.div 
               key={idx} 
               variants={itemVariants}
@@ -103,7 +69,7 @@ const Skills = () => {
               </h4>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {category.skills.map((skill, sIdx) => {
-                  const Icon = skill.icon;
+                  const Icon = getIcon(skill.icon);
                   return (
                     <div 
                       key={sIdx}

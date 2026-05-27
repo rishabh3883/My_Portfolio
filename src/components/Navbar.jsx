@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const sections = ['Home', 'About', 'Skills', 'Projects', 'Achievements', 'Education', 'Contact'];
+const sections = ['Home', 'About', 'Projects', 'Achievements', 'Skills', 'Education', 'Contact'];
 
 const Navbar = () => {
-  const [active, setActive] = useState('Home');
+  const [active, setActive] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname.replace('/', '').toLowerCase();
+      const match = sections.find(s => s.toLowerCase() === path);
+      if (match) return match;
+    }
+    return 'Home';
+  });
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,6 +31,12 @@ const Navbar = () => {
       }
       if (current && current !== active) {
         setActive(current);
+
+        // Update URL path dynamically based on scroll position for all sections
+        const targetPath = current.toLowerCase() === 'home' ? '/' : `/${current.toLowerCase()}`;
+        if (window.location.pathname !== targetPath) {
+          window.history.pushState({ section: current.toLowerCase() }, '', targetPath);
+        }
       }
     };
 

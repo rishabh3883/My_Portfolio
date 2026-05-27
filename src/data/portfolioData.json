@@ -1,0 +1,326 @@
+{
+  "hero": {
+    "name": "Rishabh Gupta",
+    "role": "Full Stack Developer",
+    "title": "Full Stack & MERN Developer",
+    "highlight": "MERN",
+    "subtitle": "\"Building scalable web applications and modern digital experiences\"",
+    "profileImg": "/profile.jpg",
+    "resumeUrl": "/RishabhGupta_Resume (4).pdf",
+    "tags": [
+      "Frontend",
+      "Backend",
+      "MERN Stack"
+    ],
+    "educationPeriod": "B.Tech • Session 2023 - 2027"
+  },
+  "about": {
+    "intro": "Computer Science Engineering student passionate about AI, Machine Learning, Computer Vision, and Full-Stack Development. Skilled in Java, Python, React.js, Node.js, MongoDB, and TensorFlow. I love building innovative applications, solving complex problems, and turning ideas into real-world software solutions.",
+    "description": "Passionate about software development, problem-solving, and modern web technologies. I focus on bridging the gap between complex backend logic and seamless frontend user experiences, ensuring every product I build is not only highly performant but also visually engaging."
+  },
+  "skills": [
+    {
+      "title": "Languages",
+      "skills": [
+        {
+          "name": "Java",
+          "icon": "FaJava"
+        },
+        {
+          "name": "Python",
+          "icon": "FaPython"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "SiJavascript"
+        }
+      ]
+    },
+    {
+      "title": "Web Development",
+      "skills": [
+        {
+          "name": "HTML",
+          "icon": "FaHtml5"
+        },
+        {
+          "name": "CSS",
+          "icon": "FaCss3Alt"
+        },
+        {
+          "name": "React.js",
+          "icon": "FaReact"
+        },
+        {
+          "name": "Node.js",
+          "icon": "FaNodeJs"
+        },
+        {
+          "name": "Express.js",
+          "icon": "SiExpress"
+        }
+      ]
+    },
+    {
+      "title": "Backend",
+      "skills": [
+        {
+          "name": "REST APIs",
+          "icon": "TbApi"
+        },
+        {
+          "name": "JWT Auth",
+          "icon": "MdSecurity"
+        },
+        {
+          "name": "CRUD Ops",
+          "icon": "FiDatabase"
+        },
+        {
+          "name": "New Skill",
+          "icon": "FaCode"
+        }
+      ]
+    },
+    {
+      "title": "Databases",
+      "skills": [
+        {
+          "name": "MongoDB",
+          "icon": "SiMongodb"
+        },
+        {
+          "name": "SQL",
+          "icon": "BsDatabase"
+        }
+      ]
+    },
+    {
+      "title": "Tools",
+      "skills": [
+        {
+          "name": "Git",
+          "icon": "FaGitAlt"
+        },
+        {
+          "name": "GitHub",
+          "icon": "FaGithub"
+        },
+        {
+          "name": "GitHub Actions",
+          "icon": "SiGithubactions"
+        },
+        {
+          "name": "Docker",
+          "icon": "FaDocker"
+        },
+        {
+          "name": "Postman",
+          "icon": "SiPostman"
+        },
+        {
+          "name": "CI/CD",
+          "icon": "FaCogs"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Smart Campus Management System",
+      "category": "Full Stack",
+      "description": "Built a MERN Stack campus management platform for managing students, events, and administrative workflows.",
+      "points": [
+        "Developed REST APIs",
+        "JWT Authentication",
+        "CRUD Operations",
+        "Responsive Dashboard"
+      ],
+      "tags": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ],
+      "badge": "⭐ Featured Project",
+      "metadata": [
+        "⚡ Responsive Design",
+        "🔐 Authentication",
+        "📡 REST APIs"
+      ],
+      "image": "smart_campus.jpg",
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "Airbnb Clone Website",
+      "category": "Full Stack",
+      "description": "Responsive property booking platform featuring listings, search, filtering, and booking workflows.",
+      "points": [
+        "Dynamic Property Listings",
+        "Search & Filters",
+        "Responsive UI",
+        "Backend API Integration"
+      ],
+      "tags": [
+        "Node.js",
+        "MongoDB",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "badge": "",
+      "metadata": [
+        "⚡ Responsive Design",
+        "📡 REST APIs",
+        "📱 Mobile Friendly"
+      ],
+      "image": "airbnb_clone.jpg",
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "AI Attendance System",
+      "category": "AI / ML",
+      "description": "Face recognition attendance management system using computer vision and real-time image processing.",
+      "points": [
+        "Facial Recognition",
+        "Real-Time Detection",
+        "Attendance Automation",
+        "Image Processing Pipeline"
+      ],
+      "tags": [
+        "Python",
+        "OpenCV",
+        "NumPy",
+        "Pandas"
+      ],
+      "badge": "🤖 AI Project",
+      "metadata": [
+        "👁 Computer Vision",
+        "🧠 Deep Learning",
+        "⚡ Real-Time Processing"
+      ],
+      "image": "ai_attendance.jpg",
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "AI Gym Coach",
+      "category": "AI / ML",
+      "description": "AI-powered fitness coaching system using pose estimation and computer vision for exercise monitoring.",
+      "points": [
+        "Pose Detection",
+        "Rep Counting",
+        "Posture Correction",
+        "Deep Learning Integration"
+      ],
+      "tags": [
+        "Python",
+        "TensorFlow",
+        "OpenCV",
+        "MediaPipe"
+      ],
+      "badge": "🤖 AI Project",
+      "metadata": [
+        "👁 Computer Vision",
+        "🧠 Deep Learning",
+        "⚡ Real-Time Processing"
+      ],
+      "image": "ai_gym.jpg",
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "Gaming Event Management Website",
+      "category": "Full Stack",
+      "description": "Platform for managing gaming tournaments, participants, schedules, and event operations.",
+      "points": [
+        "REST APIs",
+        "JWT Authentication",
+        "CRUD Features",
+        "API Testing"
+      ],
+      "tags": [
+        "MERN Stack",
+        "Postman"
+      ],
+      "badge": "",
+      "metadata": [
+        "🔐 Authentication",
+        "📡 REST APIs",
+        "⚡ Performance"
+      ],
+      "image": "gaming_event.jpg",
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "Zerodha Clone",
+      "category": "Frontend",
+      "description": "Trading dashboard clone inspired by Zerodha with reusable UI components and responsive design.",
+      "points": [
+        "Responsive Design",
+        "Reusable Components",
+        "Modern Dashboard UI"
+      ],
+      "tags": [
+        "React",
+        "Bootstrap"
+      ],
+      "badge": "",
+      "metadata": [
+        "⚡ Responsive Design",
+        "📱 Mobile Friendly",
+        "📊 Visual Charts"
+      ],
+      "image": "zerodha_clone.jpg",
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    }
+  ],
+  "achievements": [
+    {
+      "year": "2026",
+      "title": "Winner  in Sustain Tech Hackathon",
+      "description": "Built a sustainability solution within 12 hours, demonstrating rapid prototyping and problem-solving under pressure."
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science",
+      "institution": "Parul University",
+      "period": "2023 – 2027",
+      "cgpa": "7.4"
+    }
+  ],
+  "stats": [
+    {
+      "value": "10+",
+      "label": "Projects Completed",
+      "icon": "Folder"
+    },
+    {
+      "value": "300+",
+      "label": "LeetCode Problems Solved",
+      "icon": "Trophy"
+    },
+    {
+      "value": "2+",
+      "label": "Certifications",
+      "icon": "Award"
+    },
+    {
+      "value": "2027",
+      "label": "Graduation Year",
+      "icon": "GraduationCap"
+    }
+  ],
+  "contact": {
+    "email": "Rishabhgupta26225@gmail.com",
+    "phone": "+91 9473570382",
+    "github": "https://github.com/rishabh3883",
+    "linkedin": "https://linkedin.com/in/rishabh-gupta-5280832b7",
+    "leetcode": "https://leetcode.com/u/rishabh3883/",
+    "web3formsKey": "20f68039-83cf-46c8-a31c-9a97690e651e"
+  }
+}
