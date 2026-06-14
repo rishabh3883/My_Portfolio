@@ -127,30 +127,66 @@
   ],
   "projects": [
     {
-      "title": "Smart Campus Management System",
-      "category": "Full Stack",
-      "description": "Built a MERN Stack campus management platform for managing students, events, and administrative workflows.",
+      "title": "AI Attendance System",
+      "category": "AI / ML",
+      "description": "Face recognition attendance management system using computer vision and real-time image processing.",
       "points": [
-        "Developed REST APIs",
-        "JWT Authentication",
-        "CRUD Operations",
-        "Responsive Dashboard"
+        "Facial Recognition",
+        "Real-Time Detection",
+        "Attendance Automation",
+        "Image Processing Pipeline"
       ],
       "tags": [
-        "React",
-        "Node.js",
-        "Express.js",
-        "MongoDB"
+        "Python",
+        "OpenCV",
+        "NumPy",
+        "Pandas"
       ],
-      "badge": "⭐ Featured Project",
+      "badge": "🤖 AI Project",
       "metadata": [
-        "⚡ Responsive Design",
-        "🔐 Authentication",
-        "📡 REST APIs"
+        "👁 Computer Vision",
+        "🧠 Deep Learning",
+        "⚡ Real-Time Processing"
       ],
-      "image": "smart_campus.jpg",
+      "image": "ai_attendance_1.png",
+      "images": [
+        "ai_attendance_1.png",
+        "ai_attendance_2.png",
+        "ai_attendance_3.png",
+        "ai_attendance_4.png"
+      ],
       "github": "https://github.com/rishabh3883",
       "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "AI Text Summarizer App",
+      "category": "AI / ML",
+      "description": "Advanced NLP application leveraging pre-trained Hugging Face Transformers to generate abstractive summaries of long documents.",
+      "points": [
+        "Abstractive Summarization",
+        "Hugging Face Pipeline",
+        "FastAPI Backend API",
+        "React-Based Interactive Input"
+      ],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "React",
+        "Hugging Face"
+      ],
+      "badge": "🤖 AI Project",
+      "metadata": [
+        "🧠 NLP Model",
+        "⚡ FastAPI Backend",
+        "📱 Modern UI"
+      ],
+      "image": "text_summarizer_1.png",
+      "images": [
+        "text_summarizer_1.png",
+        "text_summarizer_2.png"
+      ],
+      "github": "https://github.com/rishabh3883/TEXT-SUMMERIZER-APP",
+      "live": "https://github.com/rishabh3883/TEXT-SUMMERIZER-APP"
     },
     {
       "title": "Airbnb Clone Website",
@@ -174,33 +210,67 @@
         "📡 REST APIs",
         "📱 Mobile Friendly"
       ],
-      "image": "airbnb_clone.jpg",
+      "image": "airbnb_3.png",
+      "images": [
+        "airbnb_3.png",
+        "airbnb_2.png",
+        "airbnb_1.png"
+      ],
       "github": "https://github.com/rishabh3883",
       "live": "https://github.com/rishabh3883"
     },
     {
-      "title": "AI Attendance System",
-      "category": "AI / ML",
-      "description": "Face recognition attendance management system using computer vision and real-time image processing.",
+      "title": "Zerodha Clone",
+      "category": "Frontend",
+      "description": "Trading dashboard clone inspired by Zerodha with reusable UI components and responsive design.",
       "points": [
-        "Facial Recognition",
-        "Real-Time Detection",
-        "Attendance Automation",
-        "Image Processing Pipeline"
+        "Responsive Design",
+        "Reusable Components",
+        "Modern Dashboard UI"
       ],
       "tags": [
-        "Python",
-        "OpenCV",
-        "NumPy",
-        "Pandas"
+        "React",
+        "Bootstrap"
       ],
-      "badge": "🤖 AI Project",
+      "badge": "",
       "metadata": [
-        "👁 Computer Vision",
-        "🧠 Deep Learning",
-        "⚡ Real-Time Processing"
+        "⚡ Responsive Design",
+        "📱 Mobile Friendly",
+        "📊 Visual Charts"
       ],
-      "image": "ai_attendance.jpg",
+      "image": "zerodha_1.png",
+      "images": [
+        "zerodha_1.png",
+        "zerodha_2.png",
+        "zerodha_3.png",
+        "zerodha_4.png"
+      ],
+      "github": "https://github.com/rishabh3883",
+      "live": "https://github.com/rishabh3883"
+    },
+    {
+      "title": "Smart Campus Management System",
+      "category": "Full Stack",
+      "description": "Built a MERN Stack campus management platform for managing students, events, and administrative workflows.",
+      "points": [
+        "Developed REST APIs",
+        "JWT Authentication",
+        "CRUD Operations",
+        "Responsive Dashboard"
+      ],
+      "tags": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ],
+      "badge": "⭐ Featured Project",
+      "metadata": [
+        "⚡ Responsive Design",
+        "🔐 Authentication",
+        "📡 REST APIs"
+      ],
+      "image": "smart_campus.jpg",
       "github": "https://github.com/rishabh3883",
       "live": "https://github.com/rishabh3883"
     },
@@ -251,29 +321,6 @@
         "⚡ Performance"
       ],
       "image": "gaming_event.jpg",
-      "github": "https://github.com/rishabh3883",
-      "live": "https://github.com/rishabh3883"
-    },
-    {
-      "title": "Zerodha Clone",
-      "category": "Frontend",
-      "description": "Trading dashboard clone inspired by Zerodha with reusable UI components and responsive design.",
-      "points": [
-        "Responsive Design",
-        "Reusable Components",
-        "Modern Dashboard UI"
-      ],
-      "tags": [
-        "React",
-        "Bootstrap"
-      ],
-      "badge": "",
-      "metadata": [
-        "⚡ Responsive Design",
-        "📱 Mobile Friendly",
-        "📊 Visual Charts"
-      ],
-      "image": "zerodha_clone.jpg",
       "github": "https://github.com/rishabh3883",
       "live": "https://github.com/rishabh3883"
     }
