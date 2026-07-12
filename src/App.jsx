@@ -4,12 +4,24 @@ import Navbar from './components/Navbar';
 import Hero from './components/Sections/Hero';
 import { AboutHero, Achievements, Skills, Education } from './components/Sections/About';
 import Projects from './components/Sections/Projects';
+import Certifications from './components/Sections/Certifications';
 import Contact from './components/Sections/Contact';
 import Background from './components/Background';
 import AdminPanel from './components/AdminPanel';
 
 function App() {
+  const adminPath = import.meta.env.VITE_ADMIN_PATH || 'admin';
   const [route, setRoute] = useState(window.location.hash || '#home');
+
+  useEffect(() => {
+    const trimmedPath = window.location.pathname.replace(/^\/|\/$/g, '').toLowerCase();
+    const adminPathLower = adminPath.toLowerCase();
+
+    if (trimmedPath === adminPathLower || trimmedPath.startsWith(`${adminPathLower}/`)) {
+      window.history.replaceState(null, '', `/#${adminPath}`);
+      setRoute(`#${adminPath}`);
+    }
+  }, [adminPath]);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -46,7 +58,6 @@ function App() {
     };
   }, []);
 
-  const adminPath = import.meta.env.VITE_ADMIN_PATH || 'admin';
   const isAdmin = route === `#${adminPath}` || route.startsWith(`#${adminPath}`);
 
   if (isAdmin) {
@@ -62,6 +73,7 @@ function App() {
         <main>
           <Hero />
           <AboutHero />
+          <Certifications />
           <Projects />
           <Achievements />
           <Skills />

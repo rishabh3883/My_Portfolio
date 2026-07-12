@@ -325,6 +325,78 @@
       "live": "https://github.com/rishabh3883"
     }
   ],
+  "certifications": [
+    {
+      "title": "Certified AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "issuerShort": "AWS",
+      "issued": "July 2026",
+      "validUntil": "July 2029",
+      "credentialId": "",
+      "category": "Cloud / AI",
+      "color": "#FF9900",
+      "icon": "aws",
+      "focus": [
+        "AI/ML Concepts",
+        "Generative AI",
+        "Foundation Models",
+        "Responsible AI",
+        "AWS AI Services"
+      ],
+      "credentialUrl": "https://aws.amazon.com/certification/certified-ai-practitioner/"
+    },
+    {
+      "title": "Agentic AI Certified Foundations Associate",
+      "issuer": "Oracle University",
+      "issuerShort": "Oracle",
+      "issued": "June 25, 2026",
+      "validUntil": "",
+      "credentialId": "103478073AAI26OFA",
+      "category": "AI / ML",
+      "color": "#F80000",
+      "icon": "oracle",
+      "focus": [
+        "Agentic AI Foundations",
+        "AI Concepts",
+        "Oracle Cloud AI"
+      ],
+      "credentialUrl": "https://catalog-education.oracle.com"
+    },
+    {
+      "title": "Academy Graduate – Cloud Foundations",
+      "issuer": "AWS Academy",
+      "issuerShort": "AWS Academy",
+      "issued": "June 17, 2026",
+      "validUntil": "",
+      "credentialId": "Credly Digital Badge",
+      "category": "Cloud",
+      "color": "#FF9900",
+      "icon": "aws",
+      "focus": [
+        "AWS Cloud Fundamentals",
+        "Core Cloud Concepts",
+        "20 Hours Training"
+      ],
+      "credentialUrl": "https://www.credly.com"
+    },
+    {
+      "title": "Python Coder Badge",
+      "issuer": "Kaggle",
+      "issuerShort": "Kaggle",
+      "issued": "June 21, 2026",
+      "validUntil": "",
+      "credentialId": "",
+      "category": "Python",
+      "color": "#20BEFF",
+      "icon": "kaggle",
+      "focus": [
+        "Python Programming",
+        "Data Manipulation",
+        "Skill Badge"
+      ],
+      "credentialUrl": "https://www.kaggle.com/learn/certification"
+    }
+  ],
   "achievements": [
     {
       "year": "2026",
