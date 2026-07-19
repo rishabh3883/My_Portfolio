@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, animate } from 'framer-motion';
 import { FaJava, FaReact, FaNodeJs, FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaRocket } from 'react-icons/fa';
 import { SiMongodb, SiLeetcode } from 'react-icons/si';
+import { X, Eye, Download, ExternalLink } from 'lucide-react';
 import defaultProfileImg from '../../assets/146321370.jpg';
 import portfolioData from '../../data/portfolioData.json';
 import Stats from './Stats';
@@ -121,9 +122,137 @@ const ParticleCanvas = () => {
   return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none opacity-40 z-0" />;
 };
 
+const ResumeModal = ({ resumes, onClose }) => {
+  const [activePreview, setActivePreview] = useState('');
+
+  useEffect(() => {
+    if (resumes && resumes.length > 0) {
+      const firstValid = resumes.find(r => r.url);
+      setActivePreview(firstValid ? firstValid.url : '');
+    }
+  }, [resumes]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/85 backdrop-blur-xl"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0, y: 30 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.9, opacity: 0, y: 30 }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-5xl h-[85vh] bg-[#020c1a] border border-white/10 rounded-3xl shadow-[0_45px_100px_rgba(0,0,0,0.85)] flex flex-col overflow-hidden text-white"
+      >
+        {/* Header */}
+        <div className="p-6 border-b border-white/5 flex items-center justify-between">
+          <div>
+            <h3 className="text-xl font-extrabold text-white">Select a Resume</h3>
+            <p className="text-xs text-textMuted mt-1">Preview or download the version that fits your needs.</p>
+          </div>
+          <button 
+            onClick={onClose} 
+            className="p-2.5 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all cursor-pointer"
+          >
+            <X size={18} />
+          </button>
+        </div>
+
+        {/* Grid Layout */}
+        <div className="flex-1 min-h-0 flex flex-col md:flex-row">
+          {/* Sidebar */}
+          <div className="w-full md:w-80 border-b md:border-b-0 md:border-r border-white/5 p-6 flex flex-col gap-4 overflow-y-auto">
+            {resumes && resumes.map((resume, idx) => {
+              const isValid = !!resume.url;
+              return (
+                <div 
+                  key={idx}
+                  onClick={() => { if (isValid) setActivePreview(resume.url); }}
+                  className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col gap-2.5 ${
+                    !isValid 
+                      ? 'opacity-40 border-dashed border-white/5 cursor-not-allowed'
+                      : activePreview === resume.url 
+                        ? 'bg-primary/10 border-primary shadow-[0_0_20px_rgba(56,189,248,0.15)]' 
+                        : 'bg-white/[0.015] border-white/10 hover:border-white/25'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-textMuted">Resume #{idx + 1}</span>
+                    {isValid ? (
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    ) : (
+                      <span className="text-[9px] font-mono text-amber-500 font-medium">Not Uploaded</span>
+                    )}
+                  </div>
+                  <div className="font-extrabold text-sm text-white line-clamp-1">{resume.name}</div>
+                  
+                  {isValid && (
+                    <div className="flex items-center gap-2 mt-1">
+                      <button 
+                        onClick={(e) => { e.stopPropagation(); setActivePreview(resume.url); }}
+                        className={`flex-1 py-1.5 rounded-lg text-[10px] font-bold border transition-all flex items-center justify-center gap-1 ${
+                          activePreview === resume.url 
+                            ? 'bg-primary text-background border-primary hover:bg-sky-400'
+                            : 'bg-white/5 text-white border-white/10 hover:bg-white/10'
+                        }`}
+                      >
+                        <Eye size={10} /> Preview
+                      </button>
+                      <a 
+                        href={resume.url}
+                        download
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex-1 py-1.5 rounded-lg text-[10px] font-bold bg-white/5 text-white border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center gap-1"
+                      >
+                        <Download size={10} /> Download
+                      </a>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Preview */}
+          <div className="flex-1 bg-slate-950/40 p-6 flex flex-col justify-center items-center relative min-h-0">
+            {activePreview ? (
+              <object 
+                data={activePreview} 
+                type="application/pdf" 
+                className="w-full h-full rounded-2xl border border-white/5 shadow-inner"
+              >
+                <div className="flex flex-col items-center justify-center gap-4 text-center p-8">
+                  <p className="text-sm text-textMuted">Unable to preview PDF directly in your browser.</p>
+                  <a 
+                    href={activePreview}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-3 bg-primary text-background font-bold rounded-xl text-xs hover:bg-sky-400 transition-all flex items-center gap-1.5"
+                  >
+                    <ExternalLink size={14} /> Open in New Tab
+                  </a>
+                </div>
+              </object>
+            ) : (
+              <div className="flex flex-col items-center justify-center p-8 text-center text-white/35">
+                <FaDownload size={48} className="mb-3.5 opacity-40 animate-pulse text-primary" />
+                <p className="text-sm font-medium">Select an uploaded resume from the sidebar to preview.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 const Hero = () => {
   const ref = useRef(null);
   const { hero, contact } = portfolioData;
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   const socialLinks = [
     {
@@ -332,9 +461,8 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 w-full sm:w-auto"
           >
             {/* Primary Button */}
-            <motion.a
-              href={hero.resumeUrl || "/resume.pdf"}
-              download
+            <motion.button
+              onClick={() => setResumeModalOpen(true)}
               variants={buttonVariants}
               whileHover={{
                 scale: 1.05,
@@ -354,8 +482,8 @@ const Hero = () => {
                 className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-[150%] pointer-events-none"
               />
               <FaDownload size={15} />
-              <span>Download Resume</span>
-            </motion.a>
+              <span>Download / View Resume</span>
+            </motion.button>
 
             {/* Secondary Button */}
             <motion.a
@@ -560,6 +688,16 @@ const Hero = () => {
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-down"><path d="m7 6 5 5 5-5" /><path d="m7 13 5 5 5-5" /></svg>
         </motion.div>
       </motion.div>
+
+      {/* Selectable Resumes Modal */}
+      <AnimatePresence>
+        {resumeModalOpen && (
+          <ResumeModal 
+            resumes={hero.resumes} 
+            onClose={() => setResumeModalOpen(false)} 
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 };

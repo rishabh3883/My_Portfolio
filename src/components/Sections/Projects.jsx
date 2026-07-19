@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import portfolioData from '../../data/portfolioData.json';
 
 import smartCampusImg from '../../assets/smart_campus.jpg';
-import airbnbCloneImg from '../../assets/airbnb_clone.jpg';
+import wanderlustCloneImg from '../../assets/wanderlust_clone.jpg';
 import aiAttendanceImg from '../../assets/ai_attendance.jpg';
 import aiGymImg from '../../assets/ai_gym.jpg';
 import gamingEventImg from '../../assets/gaming_event.jpg';
@@ -16,17 +16,27 @@ import aiAttendanceImg3 from '../../assets/ai_attendance_3.png';
 import aiAttendanceImg4 from '../../assets/ai_attendance_4.png';
 import textSummarizerImg1 from '../../assets/text_summarizer_1.png';
 import textSummarizerImg2 from '../../assets/text_summarizer_2.png';
-import airbnbImg1 from '../../assets/airbnb_1.png';
-import airbnbImg2 from '../../assets/airbnb_2.png';
-import airbnbImg3 from '../../assets/airbnb_3.png';
+import wanderlustImg1 from '../../assets/wanderlust_1.png';
+import wanderlustImg2 from '../../assets/wanderlust_2.png';
+import wanderlustImg3 from '../../assets/wanderlust_3.png';
 import zerodhaImg1 from '../../assets/zerodha_1.png';
 import zerodhaImg2 from '../../assets/zerodha_2.png';
 import zerodhaImg3 from '../../assets/zerodha_3.png';
 import zerodhaImg4 from '../../assets/zerodha_4.png';
+import resumefitImg1 from '../../assets/resumefit_1.png';
+import resumefitImg2 from '../../assets/resumefit_2.png';
+import resumefitImg3 from '../../assets/resumefit_3.png';
+import resumefitImg4 from '../../assets/resumefit_4.png';
+import resumefitImg5 from '../../assets/resumefit_5.png';
+import copayImg1 from '../../assets/copay_1.png';
+import copayImg2 from '../../assets/copay_2.png';
+import copayImg3 from '../../assets/copay_3.png';
+import copayImg4 from '../../assets/copay_4.png';
+import copayImg5 from '../../assets/copay_5.png';
 
 const imageMap = {
   'smart_campus.jpg': smartCampusImg,
-  'airbnb_clone.jpg': airbnbCloneImg,
+  'wanderlust_clone.jpg': wanderlustCloneImg,
   'ai_attendance.jpg': aiAttendanceImg,
   'ai_gym.jpg': aiGymImg,
   'gaming_event.jpg': gamingEventImg,
@@ -37,13 +47,23 @@ const imageMap = {
   'ai_attendance_4.png': aiAttendanceImg4,
   'text_summarizer_1.png': textSummarizerImg1,
   'text_summarizer_2.png': textSummarizerImg2,
-  'airbnb_1.png': airbnbImg1,
-  'airbnb_2.png': airbnbImg2,
-  'airbnb_3.png': airbnbImg3,
+  'wanderlust_1.png': wanderlustImg1,
+  'wanderlust_2.png': wanderlustImg2,
+  'wanderlust_3.png': wanderlustImg3,
   'zerodha_1.png': zerodhaImg1,
   'zerodha_2.png': zerodhaImg2,
   'zerodha_3.png': zerodhaImg3,
   'zerodha_4.png': zerodhaImg4,
+  'resumefit_1.png': resumefitImg1,
+  'resumefit_2.png': resumefitImg2,
+  'resumefit_3.png': resumefitImg3,
+  'resumefit_4.png': resumefitImg4,
+  'resumefit_5.png': resumefitImg5,
+  'copay_1.png': copayImg1,
+  'copay_2.png': copayImg2,
+  'copay_3.png': copayImg3,
+  'copay_4.png': copayImg4,
+  'copay_5.png': copayImg5,
 };
 
 const resolveImage = (key) => {

@@ -123,6 +123,9 @@ const AdminPanel = () => {
     let fileName;
     if (type === 'resume') {
       fileName = 'resume.pdf';
+    } else if (type.startsWith('resume_')) {
+      const idx = parseInt(type.split('_')[1]);
+      fileName = `resume_${idx}.pdf`;
     } else if (type === 'avatar') {
       fileName = 'profile.jpg';
     } else if (type === 'project') {
@@ -151,6 +154,20 @@ const AdminPanel = () => {
               hero: { ...prev.hero, resumeUrl: resData.url }
             }));
             notify('success', 'Resume PDF uploaded successfully!');
+          } else if (type.startsWith('resume_')) {
+            const idx = parseInt(type.split('_')[1]);
+            setData(prev => {
+              const list = prev.hero.resumes ? [...prev.hero.resumes] : [];
+              while (list.length <= idx) {
+                list.push({ name: `Resume ${list.length + 1}`, url: '' });
+              }
+              list[idx] = { ...list[idx], url: resData.url };
+              return {
+                ...prev,
+                hero: { ...prev.hero, resumes: list }
+              };
+            });
+            notify('success', `Resume PDF ${idx + 1} uploaded successfully!`);
           } else if (type === 'avatar') {
             setData(prev => ({
               ...prev,
@@ -789,27 +806,74 @@ const AdminPanel = () => {
                     </label>
                   </div>
                 </div>
+              </div>
 
-                {/* Resume PDF Uploader */}
-                <div className="p-6 bg-black/30 border border-white/5 rounded-2xl flex flex-col md:flex-row items-center gap-6">
-                  <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center">
-                    <FileText size={32} />
-                  </div>
-                  <div className="flex-1 w-full">
-                    <h4 className="font-bold text-white flex items-center gap-1.5 text-sm mb-1">
-                      <FileText size={16} className="text-primary" /> Resume PDF
-                    </h4>
-                    <p className="text-xs text-textMuted mb-4">Upload PDF resume. Overwrites existing</p>
-                    <label className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 border border-white/10 rounded-xl text-xs font-semibold cursor-pointer hover:bg-white/10 transition-colors shadow-md">
-                      <Upload size={14} /> Upload PDF
-                      <input 
-                        type="file" 
-                        accept="application/pdf" 
-                        onChange={(e) => handleFileUpload(e, 'resume')} 
-                        className="hidden" 
-                      />
-                    </label>
-                  </div>
+              {/* Resumes Configuration */}
+              <div className="border-t border-white/5 pt-6 w-full">
+                <h4 className="font-bold text-white flex items-center gap-2 text-base mb-2">
+                  <FileText size={18} className="text-primary" /> Selectable Resumes (Up to 4)
+                </h4>
+                <p className="text-xs text-textMuted mb-6">Manage up to 4 different resumes for viewing and downloading.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {[0, 1, 2, 3].map((idx) => {
+                    const r = data.hero.resumes?.[idx] || { name: `Resume Option ${idx + 1}`, url: '' };
+                    return (
+                      <div key={idx} className="p-5 bg-black/40 border border-white/5 rounded-2xl flex flex-col gap-4">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-semibold uppercase text-primary">Option #{idx + 1}</span>
+                          {r.url ? (
+                            <span className="text-[11px] text-emerald-400 font-medium">File Uploaded</span>
+                          ) : (
+                            <span className="text-[11px] text-amber-500 font-medium font-mono">Empty Slot</span>
+                          )}
+                        </div>
+                        <div>
+                          <label className="block text-xs font-medium text-textMuted mb-1.5">Resume Label / Role Name</label>
+                          <input
+                            type="text"
+                            value={r.name}
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              setData(prev => {
+                                const list = prev.hero.resumes ? [...prev.hero.resumes] : [];
+                                while (list.length <= idx) {
+                                  list.push({ name: `Resume Option ${list.length + 1}`, url: '' });
+                                }
+                                list[idx] = { ...list[idx], name: value };
+                                return {
+                                  ...prev,
+                                  hero: { ...prev.hero, resumes: list }
+                                };
+                              });
+                            }}
+                            placeholder={`e.g. Full Stack Developer`}
+                            className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                          />
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <label className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-semibold cursor-pointer hover:bg-white/10 transition-colors shadow-md">
+                            <Upload size={14} /> Upload PDF
+                            <input 
+                              type="file" 
+                              accept="application/pdf" 
+                              onChange={(e) => handleFileUpload(e, `resume_${idx}`)} 
+                              className="hidden" 
+                            />
+                          </label>
+                          {r.url && (
+                            <a 
+                              href={r.url} 
+                              target="_blank" 
+                              rel="noreferrer" 
+                              className="px-3 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-semibold text-textMuted hover:text-white hover:bg-white/10 transition-colors flex items-center justify-center gap-1.5"
+                            >
+                              View PDF
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

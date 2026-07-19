@@ -7,6 +7,24 @@
     "subtitle": "\"Building scalable web applications and modern digital experiences\"",
     "profileImg": "/profile.jpg",
     "resumeUrl": "/Rishabh_GuptaResume.pdf",
+    "resumes": [
+      {
+        "name": "Full Stack Developer",
+        "url": "/resume_0.pdf"
+      },
+      {
+        "name": "AI & ML Engineer",
+        "url": "/resume_1.pdf"
+      },
+      {
+        "name": "QA Automation Specialist",
+        "url": "/resume_2.pdf"
+      },
+      {
+        "name": "General Technical Resume",
+        "url": "/resume_3.pdf"
+      }
+    ],
     "tags": [
       "Frontend",
       "Backend",
@@ -127,6 +145,74 @@
   ],
   "projects": [
     {
+      "title": "Co-Pay",
+      "category": "Full Stack",
+      "description": "Git-inspired Flatmate Expense Wallet Sync tracker for rent, utilities, and room expenses with predictive finance AI insights and automated settlements.",
+      "points": [
+        "Git-Inspired Expense Commits: Log transactions as commits that track approvals and merges before updating balances",
+        "Co-Pay Finance AI: Intelligent predictive system that forecasts monthly totals and calculates daily safety margins",
+        "Gamified Workspaces: Multi-user dashboard tracking flat standings, achievement medals, and contribution heatmaps",
+        "Settlement Generator: Dynamic settlement calculator formatting clear room settlements and balances"
+      ],
+      "tags": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs"
+      ],
+      "badge": "⭐ Featured Project",
+      "metadata": [
+        "⚡ Git Workflow",
+        "🧠 Financial AI",
+        "👥 Shared Wallet Sync"
+      ],
+      "image": "copay_2.png",
+      "images": [
+        "copay_2.png",
+        "copay_1.png",
+        "copay_3.png",
+        "copay_4.png",
+        "copay_5.png"
+      ],
+      "github": "https://github.com/rishabh3883/Co-Pay",
+      "live": "https://github.com/rishabh3883/Co-Pay"
+    },
+    {
+      "title": "ResumeFit AI",
+      "category": "AI / ML",
+      "description": "GenAI-powered resume evaluation and Applicant Tracking System (ATS) optimization platform featuring deep semantic matching and real-time structure checks.",
+      "points": [
+        "AI-Powered Semantic Scoring: Detailed evaluation of resume sections against target job descriptions out of 100",
+        "Skill Validation & Analysis: Extraction and verification of claimed skills against industry baselines",
+        "Actionable Guidance: Real-time feedback identifying strengths, critical formatting errors, and missing keywords",
+        "Freemium & Auth Architecture: Designed a token gated model integrating Supabase database auth and Razorpay gateways"
+      ],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "Streamlit",
+        "Supabase",
+        "LLMs"
+      ],
+      "badge": "⭐ Featured Project",
+      "metadata": [
+        "🧠 Semantic Matching",
+        "🔐 Token / Auth Gated",
+        "📊 Detailed Breakdown"
+      ],
+      "image": "resumefit_1.png",
+      "images": [
+        "resumefit_1.png",
+        "resumefit_2.png",
+        "resumefit_3.png",
+        "resumefit_4.png",
+        "resumefit_5.png"
+      ],
+      "github": "https://github.com/rishabh3883/ResumeFit_AI",
+      "live": "https://github.com/rishabh3883/ResumeFit_AI"
+    },
+    {
       "title": "AI Attendance System",
       "category": "AI / ML",
       "description": "Face recognition attendance management system using computer vision and real-time image processing.",
@@ -189,7 +275,7 @@
       "live": "https://github.com/rishabh3883/TEXT-SUMMERIZER-APP"
     },
     {
-      "title": "Airbnb Clone Website",
+      "title": "Wanderlust Website",
       "category": "Full Stack",
       "description": "Responsive property booking platform featuring listings, search, filtering, and booking workflows.",
       "points": [
@@ -210,11 +296,11 @@
         "📡 REST APIs",
         "📱 Mobile Friendly"
       ],
-      "image": "airbnb_3.png",
+      "image": "wanderlust_3.png",
       "images": [
-        "airbnb_3.png",
-        "airbnb_2.png",
-        "airbnb_1.png"
+        "wanderlust_3.png",
+        "wanderlust_2.png",
+        "wanderlust_1.png"
       ],
       "github": "https://github.com/rishabh3883",
       "live": "https://github.com/rishabh3883"
