@@ -86,6 +86,20 @@ const CertModal = ({ cert, onClose }) => {
             {cert.title}
           </h2>
 
+          {/* Centered Badge Image */}
+          {cert.badge && (
+            <div className="flex justify-center items-center py-4 bg-white/[0.02] rounded-2xl border border-white/[0.04]">
+              <motion.img
+                src={cert.badge}
+                alt={cert.title}
+                className="w-28 h-28 object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'spring', damping: 15 }}
+              />
+            </div>
+          )}
+
           {/* Focus tags */}
           {cert.focus?.length > 0 && (
             <div>
@@ -262,7 +276,7 @@ const Carousel3D = ({ certs, onCertClick }) => {
                     <div className="absolute inset-0 pointer-events-none"
                       style={{ background: `radial-gradient(ellipse at 50% 0%, ${c}10 0%, transparent 60%)` }} />
 
-                    {/* Logo + category */}
+                     {/* Logo + category */}
                     <div className="flex items-center justify-between p-6 pb-3 relative z-10">
                       <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
                         style={{ background: `${c}14`, border: `1.5px solid ${c}28` }}>
@@ -275,10 +289,21 @@ const Carousel3D = ({ certs, onCertClick }) => {
                     </div>
 
                     {/* Title + issuer */}
-                    <div className="px-6 pb-3 relative z-10 flex-1">
-                      <h3 className="text-[14px] font-extrabold text-white leading-snug mb-1.5">{cert.title}</h3>
+                    <div className="px-6 pb-2 relative z-10">
+                      <h3 className="text-[14px] font-extrabold text-white leading-snug mb-1">{cert.title}</h3>
                       <p className="text-[11px] font-bold" style={{ color: c }}>{cert.issuer}</p>
                     </div>
+
+                    {/* Centered Badge Image */}
+                    {cert.badge && (
+                      <div className="flex justify-center items-center my-3 relative z-10 flex-1">
+                        <img
+                          src={cert.badge}
+                          alt={cert.title}
+                          className="w-20 h-20 object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:scale-110"
+                        />
+                      </div>
+                    )}
 
                     {/* Focus tags */}
                     {cert.focus?.length > 0 && (

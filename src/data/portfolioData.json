@@ -413,6 +413,26 @@
   ],
   "certifications": [
     {
+      "title": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "issuerShort": "AWS",
+      "issued": "July 20, 2026",
+      "validUntil": "July 20, 2029",
+      "credentialId": "faf88278a0e7406b981cdc5e7e7f0c52",
+      "category": "Cloud / DevOps",
+      "color": "#FF9900",
+      "icon": "aws",
+      "badge": "/aws_developer_badge.png",
+      "focus": [
+        "AWS Cloud Development",
+        "Serverless & Microservices",
+        "CI/CD Pipelines",
+        "Security & IAM Best Practices",
+        "Cloud Databases (DynamoDB/RDS)"
+      ],
+      "credentialUrl": "https://aws.amazon.com/verification"
+    },
+    {
       "title": "Certified AI Practitioner",
       "issuer": "Amazon Web Services",
       "issuerShort": "AWS",
@@ -422,6 +442,7 @@
       "category": "Cloud / AI",
       "color": "#FF9900",
       "icon": "aws",
+      "badge": "/aws_ai_practitioner_badge.png",
       "focus": [
         "AI/ML Concepts",
         "Generative AI",
@@ -441,6 +462,7 @@
       "category": "AI / ML",
       "color": "#F80000",
       "icon": "oracle",
+      "badge": "/oracle_agentic_ai_badge.jpg",
       "focus": [
         "Agentic AI Foundations",
         "AI Concepts",
@@ -510,7 +532,7 @@
       "icon": "Trophy"
     },
     {
-      "value": "2+",
+      "value": "5",
       "label": "Certifications",
       "icon": "Award"
     },
