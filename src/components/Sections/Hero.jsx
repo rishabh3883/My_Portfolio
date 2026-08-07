@@ -269,7 +269,7 @@ const Hero = () => {
     },
     {
       name: 'LeetCode',
-      url: contact.leetcode || 'https://leetcode.com/u/rishabh3883/',
+      url: contact.leetcode || 'https://leetcode.com/u/rishabhgupta3883/',
       icon: SiLeetcode,
       glow: '0 0 20px rgba(245, 158, 11, 0.35)'
     },

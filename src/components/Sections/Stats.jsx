@@ -80,7 +80,7 @@ const Stats = () => {
       case 0: // Projects
         return { href: "#projects", target: "_self" };
       case 1: // LeetCode
-        return { href: contact?.leetcode || "https://leetcode.com/u/rishabh3883/", target: "_blank", rel: "noreferrer" };
+        return { href: contact?.leetcode || "https://leetcode.com/u/rishabhgupta3883/", target: "_blank", rel: "noreferrer" };
       case 2: // Certifications
         return { href: "#achievements", target: "_self" };
       case 3: // Graduation
