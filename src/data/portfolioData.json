@@ -413,6 +413,25 @@
   ],
   "certifications": [
     {
+      "title": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "issuerShort": "AWS",
+      "issued": "August 1, 2026",
+      "validUntil": "August 1, 2029",
+      "credentialId": "f330e4124f284f8487a2d536b55cfb86",
+      "category": "Cloud / Infra",
+      "color": "#FF9900",
+      "icon": "aws",
+      "badge": "/aws_cloud_practitioner_badge.png",
+      "focus": [
+        "AWS Cloud Concepts",
+        "Security & Compliance",
+        "Core AWS Services",
+        "Billing & Pricing Models"
+      ],
+      "credentialUrl": "https://aws.amazon.com/verification"
+    },
+    {
       "title": "AWS Certified Developer - Associate",
       "issuer": "Amazon Web Services",
       "issuerShort": "AWS",
@@ -532,7 +551,7 @@
       "icon": "Trophy"
     },
     {
-      "value": "5",
+      "value": "6",
       "label": "Certifications",
       "icon": "Award"
     },

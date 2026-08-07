@@ -355,7 +355,7 @@ export const Achievements = () => {
   const highlights = [
     { icon: Folder, value: 10, suffix: "+", label: "Projects Built", color: "rgba(56,189,248,0.25)" },
     { icon: Trophy, value: 300, suffix: "+", label: "LeetCode Problems Solved", color: "rgba(245,158,11,0.25)" },
-    { icon: Award, value: 2, suffix: "+", label: "Certifications", color: "rgba(168,85,247,0.25)" },
+    { icon: Award, value: 6, suffix: "+", label: "Certifications", color: "rgba(168,85,247,0.25)" },
     { icon: Briefcase, value: "MERN Stack", suffix: "", label: "Developer Specialty", color: "rgba(16,185,129,0.25)" }
   ];
 
