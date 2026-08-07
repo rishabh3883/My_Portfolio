@@ -499,6 +499,7 @@
       "category": "Cloud",
       "color": "#FF9900",
       "icon": "aws",
+      "badge": "/aws_academy_cloud_foundations_badge.png",
       "focus": [
         "AWS Cloud Fundamentals",
         "Core Cloud Concepts",
