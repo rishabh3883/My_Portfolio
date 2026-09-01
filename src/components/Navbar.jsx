@@ -67,8 +67,9 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold tracking-tighter text-white" onClick={(e) => { e.preventDefault(); scrollToSection('Home'); }}>
-          Rishabh<span className="text-primary">.</span>
+        <a href="#home" className="flex items-center gap-2.5 text-xl font-bold tracking-tighter text-white group" onClick={(e) => { e.preventDefault(); scrollToSection('Home'); }}>
+          <img src="/favicon.svg" alt="RG Logo" className="w-8 h-8 rounded-lg shadow-[0_0_12px_rgba(56,189,248,0.4)] group-hover:scale-110 transition-transform duration-300" />
+          <span>Rishabh<span className="text-primary">.</span></span>
         </a>
 
         {/* Desktop Menu */}
